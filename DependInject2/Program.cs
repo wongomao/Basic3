@@ -50,7 +50,7 @@ namespace DependInject2
             {
                 new Memo {Title = "memo 1", DueAt = new DateTime(2017,4,10) },
                 new Memo {Title = "memo 2", DueAt = new DateTime(2017,4,11) },
-                new Memo {Title = "memo 3", DueAt = new DateTime(2017,4,23) }
+                new Memo {Title = "memo 3", DueAt = new DateTime(2017,7,30) }
             }.AsQueryable();
             return memos;
         }
