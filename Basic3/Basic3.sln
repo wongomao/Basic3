@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollyPolly", "..\PollyPolly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpExplore", "..\HttpExplore\HttpExplore.csproj", "{840E9D55-E3DD-4241-BDBC-064CE4ED5430}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood", "..\CoreLearn\OdeToFood\OdeToFood.csproj", "{4BEBDD7A-208E-4A3D-A177-5D6B0387ADDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{840E9D55-E3DD-4241-BDBC-064CE4ED5430}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{840E9D55-E3DD-4241-BDBC-064CE4ED5430}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{840E9D55-E3DD-4241-BDBC-064CE4ED5430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BEBDD7A-208E-4A3D-A177-5D6B0387ADDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BEBDD7A-208E-4A3D-A177-5D6B0387ADDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BEBDD7A-208E-4A3D-A177-5D6B0387ADDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BEBDD7A-208E-4A3D-A177-5D6B0387ADDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
