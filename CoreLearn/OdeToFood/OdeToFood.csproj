@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Basic3\OdeToFood.Data\OdeToFood.Data.csproj" />
+    <ProjectReference Include="..\OdeToFood.Data\OdeToFood.Data.csproj" />
   </ItemGroup>
 
 </Project>

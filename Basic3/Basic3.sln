@@ -19,9 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpExplore", "..\HttpExplo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdeToFood", "..\CoreLearn\OdeToFood\OdeToFood.csproj", "{4BEBDD7A-208E-4A3D-A177-5D6B0387ADDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Core", "..\OdeToFood.Core\OdeToFood.Core.csproj", "{6B5B69CA-B7D4-4BB3-8039-9DACC90B2214}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Core", "..\CoreLearn\OdeToFood.Core\OdeToFood.Core.csproj", "{6B5B69CA-B7D4-4BB3-8039-9DACC90B2214}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Data", "OdeToFood.Data\OdeToFood.Data.csproj", "{3E12D6F4-CBF5-431A-85C6-F55EAEC7DD8D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Data", "..\CoreLearn\OdeToFood.Data\OdeToFood.Data.csproj", "{3E12D6F4-CBF5-431A-85C6-F55EAEC7DD8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
