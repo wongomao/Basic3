@@ -33,6 +33,11 @@
                    asp-route-restaurantId="@restaurant.Id">
                     <i class="glyphicon glyphicon-zoom-in"></i>
                 </a>
+                <a class="btn btn-lg"
+                   asp-page="./Edit"
+                   asp-route-restaurantId="@restaurant.Id">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
             </td>
         </tr>
     }
