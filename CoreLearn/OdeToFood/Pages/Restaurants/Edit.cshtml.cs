@@ -15,6 +15,7 @@ namespace OdeToFood.Pages.Restaurants
         private readonly IRestaurantData _restaurantData;
         private readonly IHtmlHelper _htmlHelper;
 
+        [BindProperty]
         public Restaurant Restaurant { get; set; }
         public IEnumerable<SelectListItem> Cuisines { get; set; }
 
@@ -32,6 +33,23 @@ namespace OdeToFood.Pages.Restaurants
             {
                 return RedirectToPage("./NotFound");
             }
+            return Page();
+        }
+
+        public IActionResult OnPost()
+        {
+            // we can capture info about the validation of any piece of data coming from the form/page
+            // through the ModelState
+            //var x = ModelState["Location"].ValidationState;
+
+            // typically all we need to do is ask if the modelstate is valid
+            if (ModelState.IsValid)
+            {
+                Restaurant = _restaurantData.Update(Restaurant);
+                _restaurantData.Commit();
+            }
+
+            Cuisines = _htmlHelper.GetEnumSelectList<CuisineType>();
             return Page();
         }
     }

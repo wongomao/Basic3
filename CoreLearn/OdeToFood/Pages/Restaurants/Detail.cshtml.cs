@@ -8,6 +8,7 @@ namespace OdeToFood.Pages.Restaurants
     public class DetailModel : PageModel
     {
         private readonly IRestaurantData _restaurantData;
+
         public Restaurant Restaurant { get; set; }
 
         public DetailModel(IRestaurantData restaurantData)
@@ -24,5 +25,6 @@ namespace OdeToFood.Pages.Restaurants
             }
             return Page();
         }
+
     }
 }
