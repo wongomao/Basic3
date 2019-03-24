@@ -25,10 +25,17 @@ namespace OdeToFood.Pages.Restaurants
             _htmlHelper = htmlHelper;
         }
 
-        public IActionResult OnGet(int restaurantId)
+        public IActionResult OnGet(int? restaurantId)
         {
             Cuisines = _htmlHelper.GetEnumSelectList<CuisineType>();
-            Restaurant = _restaurantData.GetById(restaurantId);
+            if (restaurantId.HasValue)
+            {
+                Restaurant = _restaurantData.GetById(restaurantId.Value);
+            }
+            else
+            {
+                Restaurant = new Restaurant();
+            }
             if (Restaurant == null)
             {
                 return RedirectToPage("./NotFound");
@@ -41,17 +48,24 @@ namespace OdeToFood.Pages.Restaurants
             // we can capture info about the validation of any piece of data coming from the form/page
             // through the ModelState
             //var x = ModelState["Location"].ValidationState;
-
             // typically all we need to do is ask if the modelstate is valid
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                Restaurant = _restaurantData.Update(Restaurant);
-                _restaurantData.Commit();
-                return RedirectToPage("./Detail", new { restaurantId = Restaurant.Id } );
+                Cuisines = _htmlHelper.GetEnumSelectList<CuisineType>();
+                return Page();
             }
 
-            Cuisines = _htmlHelper.GetEnumSelectList<CuisineType>();
-            return Page();
+            if (Restaurant.Id > 0)
+            {
+                Restaurant = _restaurantData.Update(Restaurant);
+            }
+            else
+            {
+                Restaurant = _restaurantData.Add(Restaurant);
+            }
+            _restaurantData.Commit();
+            TempData["Message"] = "Restaurant saved";
+            return RedirectToPage("./Detail", new { restaurantId = Restaurant.Id });
         }
     }
 }

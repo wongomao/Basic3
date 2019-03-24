@@ -35,7 +35,7 @@ namespace Basic3
 
         static void Nop()
         {
-            DateTime2 x = new DateTime2();
+            //DateTime2 x = new DateTime2();
         }
     }
 }
