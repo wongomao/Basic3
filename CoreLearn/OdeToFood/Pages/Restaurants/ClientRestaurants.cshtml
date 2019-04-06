@@ -1,0 +1,27 @@
+﻿@page
+@model OdeToFood.Pages.Restaurants.ClientRestaurantsModel
+@{
+    ViewData["Title"] = "ClientRestaurants";
+}
+
+<h2>ClientRestaurants</h2>
+
+@section Scripts { 
+    <script>
+        // normally we do not script here, but this is for simplicity
+        // assume we have jquery loaded on the page
+        // here the function will be invoked when the DOM is ready
+        //    Want jquery to go out and make an ajax call to an api endpoint that we have built
+        //    endpoint "/api/restaurants/" should return all the restaurants in a json format
+
+        $(function () {
+            $.ajax("/api/restaurants/", { method: "get" })
+                .then(function (response) {
+                    // ? what to do with response?
+                    // want to build table, but for now, just log to console
+                    console.dir(response);
+                });
+        });
+
+    </script>
+}
