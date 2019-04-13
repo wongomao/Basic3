@@ -7,6 +7,17 @@
 <h2>ClientRestaurants</h2>
 
 @section Scripts { 
+
+    <environment include="Development">
+
+    </environment>
+    <environment exclude="Development">
+        <!-- use CDN (content delivery network) to deliver datatables js when not in dev mode -->
+        <!-- see https://datatables.net/download/ -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.css" />
+        <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.js"></script>
+    </environment>
+
     <script>
         // normally we do not script here, but this is for simplicity
         // assume we have jquery loaded on the page
