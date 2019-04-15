@@ -37,4 +37,6 @@ Done. To undo this action, use 'ef migrations remove'
 PS D:\dv\src\Basic3\CoreLearn\OdeToFood.Data>
 PS D:\dv\src\Basic3\CoreLearn\OdeToFood.Data> dotnet ef database update -s ..\OdeToFood\OdeToFood.csproj
 
+Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+
 */
