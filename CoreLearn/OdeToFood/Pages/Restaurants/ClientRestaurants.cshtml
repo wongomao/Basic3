@@ -6,7 +6,7 @@
 
 <h2>ClientRestaurants</h2>
 
-@section Scripts { 
+@section Scripts {
 
 <environment include="Development">
     <!-- package.json is now in OdeToFood folder; we must do an install       -->
@@ -14,7 +14,9 @@
     <!-- ...Basic3\CoreLearn\OdeToFood> npm install --save datatables.net-bs  -->
     <!-- creates "L:\dev\Basic3\CoreLearn\OdeToFood\node_modules"             -->
     <!-- -------------------------------------------------------------------- -->
-
+    <script src="~/node_modules/datatables.net-bs/node_modules/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="~/node_modules/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+    <link href="~/node_modules/datatables.net-bs/css/dataTables.bootstrap.css" rel="stylesheet" />
 </environment>
     <environment exclude="Development">
         <!-- use CDN (content delivery network) to deliver datatables js when not in dev mode -->
