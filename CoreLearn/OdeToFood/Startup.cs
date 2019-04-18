@@ -61,6 +61,7 @@ namespace OdeToFood
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseNodeModules(env); // allow serving of static files from node-modules folder
             app.UseCookiePolicy();
 
             app.UseMvc();
