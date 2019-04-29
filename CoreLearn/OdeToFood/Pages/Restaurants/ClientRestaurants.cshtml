@@ -6,6 +6,10 @@
 
 <h2>ClientRestaurants</h2>
 
+<table class="table" id="restaurants">
+
+</table>
+
 @section Scripts {
 
 <environment include="Development">
@@ -37,7 +41,26 @@
                 .then(function (response) {
                     // ? what to do with response?
                     // want to build table, but for now, just log to console
-                    console.dir(response);
+                    // console.dir(response);
+                    // ... or ...
+                    // use a jquery selector to go out and find an element by id... that is, find id="restaurants" element
+                    // then invoke the datatable extension
+
+                    // hard-coding values, but better to get them through an API
+                    var cuisines = ["Unknown", "Mexican", "Italian", "Indian", "Chinese", "American"]
+
+                    $("#restaurants").dataTable({
+                        data: response,
+                        columns: [
+                            { "data": "name" },
+                            { "data": "location" },
+                            {
+                                "data": "cuisine", "render": function (data) {
+                                    return cuisines[data];
+                                }
+                            }
+                        ]
+                    })
                 });
         });
 
