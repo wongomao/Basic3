@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCExplore", "IoCExplore\Io
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloDI", "HelloDI\HelloDI.csproj", "{3CC73FBC-C96B-474D-84C8-95755ED09E6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NH_Fundamentals", "..\NH_Fundamentals\NH_Fundamentals.csproj", "{FD8BDA02-8C54-41CC-BC38-9D19B6555FC2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakePython_PdfSplit", "..\FakePython_PdfSplit\FakePython_PdfSplit.csproj", "{7C329DFB-20FE-4FE4-A38C-BD27B4473730}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollyPolly", "..\PollyPolly\PollyPolly.csproj", "{D6FB50DA-10F3-4AD8-BEFD-10966BD78D76}"
@@ -39,10 +37,6 @@ Global
 		{3CC73FBC-C96B-474D-84C8-95755ED09E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CC73FBC-C96B-474D-84C8-95755ED09E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CC73FBC-C96B-474D-84C8-95755ED09E6C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD8BDA02-8C54-41CC-BC38-9D19B6555FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD8BDA02-8C54-41CC-BC38-9D19B6555FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD8BDA02-8C54-41CC-BC38-9D19B6555FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD8BDA02-8C54-41CC-BC38-9D19B6555FC2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7C329DFB-20FE-4FE4-A38C-BD27B4473730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7C329DFB-20FE-4FE4-A38C-BD27B4473730}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C329DFB-20FE-4FE4-A38C-BD27B4473730}.Release|Any CPU.ActiveCfg = Release|Any CPU
