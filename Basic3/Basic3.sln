@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransformTypes", "..\Transf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransformCsv01", "..\TransformCsv01\TransformCsv01.csproj", "{C2DCA3B9-1BEC-4B73-A412-4F113EE9368A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestXyzTransform", "..\TestXyzTransform\TestXyzTransform.csproj", "{FE19C879-471B-49D3-AE16-FC2C0528CF94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestXyzTransform", "..\TestXyzTransform\TestXyzTransform.csproj", "{FE19C879-471B-49D3-AE16-FC2C0528CF94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransformCsv02", "..\TransformCsv02\TransformCsv02.csproj", "{DF5C3D35-0551-4FEB-8D98-3EE3355DF7AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{FE19C879-471B-49D3-AE16-FC2C0528CF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE19C879-471B-49D3-AE16-FC2C0528CF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE19C879-471B-49D3-AE16-FC2C0528CF94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF5C3D35-0551-4FEB-8D98-3EE3355DF7AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF5C3D35-0551-4FEB-8D98-3EE3355DF7AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF5C3D35-0551-4FEB-8D98-3EE3355DF7AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF5C3D35-0551-4FEB-8D98-3EE3355DF7AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

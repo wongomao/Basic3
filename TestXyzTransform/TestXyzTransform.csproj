@@ -21,6 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TransformCsv01\TransformCsv01.csproj" />
+    <ProjectReference Include="..\TransformCsv02\TransformCsv02.csproj" />
     <ProjectReference Include="..\TransformTypes\TransformTypes.csproj" />
   </ItemGroup>
 

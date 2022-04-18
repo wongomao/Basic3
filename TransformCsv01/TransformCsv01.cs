@@ -1,5 +1,6 @@
 ﻿using CsvHelper;
 using CsvHelper.Configuration;
+using System.Dynamic;
 using System.Globalization;
 namespace XyzTransform;
 
@@ -7,22 +8,21 @@ public class TransformCsv01 : IXyzTransform
 {
     public string Id => "Csv01";
 
-    public void TransformFile(string filename)
+    private readonly CsvConfiguration _configuration;
+    public TransformCsv01()
     {
-        _ = TransformFileAsync(filename);
-    }
-
-    public async Task TransformFileAsync(string filename)
-    {
-        IEnumerable<PaymentInRec>? paymentsIn = null;
-        List<PaymentOutRec>? paymentsOut = new();
-        var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+        _configuration = new CsvConfiguration(CultureInfo.InvariantCulture)
         {
             Delimiter = ",",
             HasHeaderRecord = false
         };
+    }
+    public void TransformFile(string filename)
+    {
+        IEnumerable<PaymentInRec>? paymentsIn = null;
+        List<PaymentOutRec>? paymentsOut = new();
         using (var reader = new StreamReader(filename))
-        using (var csv = new CsvReader(reader, config))
+        using (var csv = new CsvReader(reader, _configuration))
         {
             paymentsIn = csv.GetRecords<PaymentInRec>();
             foreach (var pay in paymentsIn)
@@ -34,7 +34,31 @@ public class TransformCsv01 : IXyzTransform
         if (paymentsOut.Count() > 0)
         {
             using (var writer = new StreamWriter(filename))
-            using (var csvw = new CsvWriter(writer, config))
+            using (var csvw = new CsvWriter(writer, _configuration))
+            {
+                csvw.WriteRecords(paymentsOut);
+            }
+        }
+    }
+
+    public async Task TransformFileAsync(string filename)
+    {
+        IEnumerable<PaymentInRec>? paymentsIn = null;
+        List<PaymentOutRec>? paymentsOut = new();
+        using (var reader = new StreamReader(filename))
+        using (var csv = new CsvReader(reader, _configuration))
+        {
+            paymentsIn = csv.GetRecords<PaymentInRec>();
+            foreach (var pay in paymentsIn)
+            {
+                paymentsOut.Add(new PaymentOutRec(pay));
+            }
+        }
+
+        if (paymentsOut.Count() > 0)
+        {
+            using (var writer = new StreamWriter(filename))
+            using (var csvw = new CsvWriter(writer, _configuration))
             {
                 await csvw.WriteRecordsAsync(paymentsOut);
             }

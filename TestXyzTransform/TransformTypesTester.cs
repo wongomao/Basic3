@@ -12,7 +12,7 @@ public class TransformTypesTester
     }
 
     [Fact]
-    public void TestDumbTransform01()
+    public void TestDumbTransformSync()
     {
         // arrange
         string filename = "testDumb.txt";
@@ -39,7 +39,7 @@ public class TransformTypesTester
     }
 
     [Fact]
-    public async Task TestDumbTransform02()
+    public async Task TestDumbTransformAsync()
     {
         // arrange
         string filename = "testDumb.txt";
